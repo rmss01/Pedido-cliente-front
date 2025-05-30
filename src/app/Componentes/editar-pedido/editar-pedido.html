@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">EDITAR PEDIDO</h3>
+        </div>
+
+        <div class="card-body">
+            <label for="idPedido">ID PEDIDO</label>
+            <input class="form-control" type="number" name="idPedido" placeholder="ID Pedido" [(ngModel)] = "pedido.idPedido">
+
+            <label for="fecha">FEHA</label>
+            <input class="form-control" type="date" name="fecha" placeholder="Fecha" [(ngModel)] = "fechaFormateada">
+
+            <label for="total">TOTAL</label>
+            <input class="form-control" type="number" name="total" placeholder="Total" [(ngModel)] = "pedido.total">
+
+            <label for="status">ESTATUS</label>
+            <input class="form-control" type="text" name="status" placeholder="Estatus" [(ngModel)] = "pedido.status">
+
+            <label for="clienteId">Cliente ID</label>
+            <input class="form-control" type="numbe" name="clienteId" placeholder="Cliente Id" [(ngModel)] = "pedido.clienteID.idCliente">
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-success" (click) = "editar()">Editar</button>
+        </div>
+    </div>
+</div>

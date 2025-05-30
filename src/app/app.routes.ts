@@ -4,6 +4,8 @@ import { Listar } from './Componentes/listar/listar';
 import { Pedidos } from './Componentes/pedidos/pedidos';
 import { Guardar } from './Componentes/guardar/guardar';
 import { NuevoPedido } from './Componentes/nuevo-pedido/nuevo-pedido';
+import { Editar } from './Componentes/editar/editar';
+import { EditarPedido } from './Componentes/editar-pedido/editar-pedido';
 
 
 export const routes: Routes = [
@@ -23,5 +25,13 @@ export const routes: Routes = [
     {
         path: 'nuevoPedido',
         component:NuevoPedido
+    },
+    {
+        path: 'editar',
+        component:Editar
+    },
+    {
+        path: 'editarPedido',
+        component:EditarPedido
     }
 ];

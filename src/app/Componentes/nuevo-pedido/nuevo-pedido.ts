@@ -17,7 +17,7 @@ export class NuevoPedido {
   constructor(private service: Ws, private router: Router){}
 
   pedidoNuevo = new Pedido();
-  clienteIdSeleccionado: number = 0;
+  clienteIdSeleccionado: number = -1;
 
   nuevo(){
     const cliente = new Cliente();

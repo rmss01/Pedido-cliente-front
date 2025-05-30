@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">EDITAR CLIENTE</h4>
+        </div>
+
+        <div class="card-body">
+            <label for="idCliente">ID Cliente</label>
+            <input type="number" class="form-control" name="idCliente" placeholder="Ingresa el ID nuevo" [(ngModel)] = "cliente.idCliente" readonly>
+
+            <label for="nombre">NOMBRE</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Ingresa el nombre" [(ngModel)] = "cliente.nombre">
+
+            <label for="apellido">APELLIDO</label>
+            <input type="text" class="form-control" name="apellido"  placeholder="Ingresa el apellido" [(ngModel)] = "cliente.apellido">
+
+            <label for="rfc">RFC</label>
+            <input type="text" class="form-control" name="rfc" placeholder="Ingresa el RFC" [(ngModel)] = "cliente.rfc">
+
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-warning" (click) = "editar()">Editar</button>
+        </div>
+    </div>
+</div>
