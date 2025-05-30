@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Pedidos</h3>
+        <button type="button" class="btn btn-success" (click) = "nuevo()">Nuevo</button>
+    </div>
+
+    
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id Pedido</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Estatus</th>
+                <th>ClienteId</th>
+                <th>NombreCliente</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            @for(pedido of pedidos ; track pedido.idPedido){
+
+                <tr>
+                    <td>{{pedido.idPedido}}</td>
+                    <td>{{pedido.fecha | date:'dd/MM/yyyy'}}</td>
+                    <td>${{pedido.total}} MXN</td>
+                    <td>{{pedido.status}}</td>
+                    <td>{{pedido.clienteID?.idCliente || 'sin cliente'}}</td>
+                    <td>{{pedido.clienteID?.nombre || 'sin cliente'}}</td>
+                    <td style="text-align: center;"><button class="btn btn-outline-warning">editar</button></td>
+                    <td style="text-align: center;"><button class="btn btn-outline-danger">eliminar</button></td>
+                </tr>
+            }@empty{
+                <td>No existen registros</td>
+            }
+        </tbody>
+    </table>
+</div>

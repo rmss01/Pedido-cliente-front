@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">NUEVO CLIENTE</h4>
+        </div>
+
+        <div class="card-body">
+            <label for="idCliente">ID Cliente</label>
+            <input type="number" class="form-control" name="idCliente" placeholder="Ingresa el ID nuevo" [(ngModel)] = "clienteNuevo.idCliente">
+
+            <label for="nombre">NOMBRE</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Ingresa el nombre" [(ngModel)] = "clienteNuevo.nombre">
+
+            <label for="apellido">APELLIDO</label>
+            <input type="text" class="form-control" name="apellido"  placeholder="Ingresa el apellido" [(ngModel)] = "clienteNuevo.apellido">
+
+            <label for="rfc">RFC</label>
+            <input type="text" class="form-control" name="rfc" placeholder="Ingresa el RFC" [(ngModel)] = "clienteNuevo.rfc">
+
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-success" (click) = "guardar()">Guardar</button>
+        </div>
+    </div>
+</div>
