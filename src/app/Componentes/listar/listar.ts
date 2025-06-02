@@ -22,8 +22,8 @@ export class Listar implements OnInit {
   clienteEliminar = new Cliente();
 
   //Invocar a la peticion para que se realice
-  listar(){
-    this.service.listar().subscribe(respuesta =>{
+  listar() {
+    this.service.listar().subscribe(respuesta => {
       console.log(respuesta);
       console.log(JSON.stringify(respuesta));
       this.clientes = respuesta;
@@ -57,7 +57,7 @@ export class Listar implements OnInit {
             icon: "success"
           });
           this.listar();
-          
+
         },
           error => {
             Swal.fire({

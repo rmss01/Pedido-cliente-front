@@ -19,7 +19,7 @@ export class EditarPedido implements OnInit {
 
   pedido = new Pedido();
   fechaFormateada: string = "";
- 
+
 
   ngOnInit(): void {
     //alert(localStorage.getItem('idPedido'));
@@ -41,38 +41,38 @@ export class EditarPedido implements OnInit {
 
       this.fechaFormateada = `${yyyy}-${mm}-${dd}`;
 
-      
+
     })
     console.log(this.pedido);
 
   }
 
-  editar(){
+  editar() {
     this.pedido.fecha = new Date(this.fechaFormateada);
 
-    this.service.editarP(this.pedido).subscribe(response =>{
+    this.service.editarP(this.pedido).subscribe(response => {
       Swal.fire(
-              {
-                title: "EDITAR",
-                text:JSON.stringify(response),
-                showConfirmButton: false,
-                timer: 3000,
-                icon: 'success'
-              }
-            );
-            this.router.navigate(['pedidos']);
-    },
-    error =>{
-          console.log(error.error.mensaje);
-          Swal.fire({
-                  title: "Error",
-                  text: JSON.stringify(error.error.mensaje),
-                  icon: "error",
-                  timer: 3500
-                });
+        {
+          title: "EDITAR",
+          text: JSON.stringify(response),
+          showConfirmButton: false,
+          timer: 3000,
+          icon: 'success'
         }
-  
-  )
+      );
+      this.router.navigate(['pedidos']);
+    },
+      error => {
+        console.log(error.error.mensaje);
+        Swal.fire({
+          title: "Error",
+          text: JSON.stringify(error.error.mensaje),
+          icon: "error",
+          timer: 3500
+        });
+      }
+
+    )
   }
 
 }
